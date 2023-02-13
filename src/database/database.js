@@ -7,4 +7,4 @@ mongoose.connect(process.env.urlDatabaseProd,{
     useUnifiedTopology: true
 })
     .then(db => console.log('Database is connected'))
-    .catch(err => console.log('Error connecting database ' + error))
+    .catch(err => console.log('Error connecting database ' + err))
