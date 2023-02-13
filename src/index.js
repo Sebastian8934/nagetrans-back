@@ -1,14 +1,14 @@
 const express = require("express");
 const morgan = require('morgan')
 const cors = require('cors');
+require('dotenv').config({path:'./.env'});
 
 //Esto me toco ponerlo por que me estaba mandando un problema con la conexion a la base de datos
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
 
 const app = express(); 
-const PORT = process.env.PORT || 10000; //3000
-
+const PORT = process.env.PORT || 10000;
 app.use(express.json());
 
 const v1UserRouter = require('./routes/userRoutes');
